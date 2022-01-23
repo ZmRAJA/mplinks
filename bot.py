@@ -10,7 +10,7 @@ API_HASH = environ.get('API_HASH')
 BOT_TOKEN = environ.get('BOT_TOKEN')
 API_KEY = environ.get('API_KEY', '4lZuNhed0dhdpG414MWn')
 
-bot = Client('pdiskshortner bot',
+bot = Client(' ModsApkRoBot',
              api_id=API_ID,
              api_hash=API_HASH,
              bot_token=BOT_TOKEN,
@@ -28,7 +28,7 @@ async def start(bot, message):
 async def help(bot, message):
     await message.reply(
         f"**This is our Help Page {message.chat.first_name}!**\n\n"
-        "If your had **deployed bot** succesfully then you have to do nothing to use this bot\n\n **Just Simply send Any Pdisk Link in Any Format**\n -Shortend Url\n -Cofile url\n\n __Both url are accepted__ \n\n"
+        "If your had **deployed bot** succesfully then you have to do nothing to use this bot\n\n **Just Simply send Any mdisk Link in Any Format**\n -Shortend Url\n -Cofile url\n\n __Both url are accepted__ \n\n"
         "**Demo Of Urls**\n **Bit.ly Shortened Url**\n https://bit.ly/38NEpVu \n\n **Mdisk Official Shorten Link** \n https://mdisk.me/convertor/2x3/MZdAES \n\n"
         "**Long Url** - https://mypowerdisk.com/mybox/share?id=9053ccdb11daeffdb34471c44cc086ee30b5")
 
@@ -39,7 +39,7 @@ async def link_handler(bot, message):
     session = requests.Session()
     resp = session.head(Link, allow_redirects=True)
     short_link = await post_shortlink(resp.url)
-    shortlink = ('https://mdisk.me/convertor/='+short_link)
+    shortlink = ('https://mdisk.me/convertor/'+short_link)
     txt = stringliteral.replace(Link, shortlink)
     try:
         await message.reply(f'{txt}', quote=True)
