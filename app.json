@@ -1,6 +1,6 @@
 {
-    "name": "mpzdiskBot",
-    "description": "Make short link by using PdiskShortener API key",
+    "name": "ModsApkRoBot",
+    "description": "Make short link by using mdiskShortener API key",
     "keywords": [
         "telegram",
         "PdiskShortener"
